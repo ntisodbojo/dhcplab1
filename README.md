@@ -15,7 +15,7 @@ använd följande magsiska kommando som laddar ner projektet och skapar en folde
 
 gå  in katalogen
 
-	$ cd dhcplab
+	$ cd dhcplab1
 
 nu är vi klar för att starta maskinerna
 
