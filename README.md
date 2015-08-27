@@ -2,7 +2,7 @@
 
 Ni ska skapa enklast möjliga dhcpserver som ger ut ip-adresser åt en klient.  För detta har jag skrivit en Vagrantfile [multimachine](https://docs.vagrantup.com/v2/multi-machine/ ) som skapar  två maskiner *happyclient* och *happyserver*.
 
-Förutsättningen för att det här ska fungera är att ni har följt mina tidigare intruktioner och intallerat linux, virtualbox och vagrant.
+Förutsättningen för att det här ska fungera är att ni har följt mina tidigare intruktioner och installerat linux, virtualbox och vagrant.
 
 ## Ladda ner  Vagrantfile
 
