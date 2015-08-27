@@ -11,7 +11,7 @@ gå till eran lab folder ( **Hint:** cd)
 
 använd följande magsiska kommando som laddar ner projektet och skapar en folder dhcplab
 
-	$ git clone  LÄNK TODO
+	$ git clone  https://github.com/ntisodbojo/dhcplab1.git
 
 gå  in katalogen
 
