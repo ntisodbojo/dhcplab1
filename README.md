@@ -1,8 +1,5 @@
 # dhcplab1
 
-
-#Lab dhcp server och klient
-
 Ni ska skapa enklast möjliga dhcpserver som ger ut ip-adresser åt en klient.  För detta har jag skrivit en Vagrantfile [multimachine](https://docs.vagrantup.com/v2/multi-machine/ ) som skapar  två maskiner *happyclient* och *happyserver*.
 
 Förutsättningen för att det här ska fungera är att ni har följt mina tidigare intruktioner och intallerat linux, virtualbox och vagrant.
@@ -43,9 +40,9 @@ Titta gärna snabbt igenom filen, kom ihåg att alla rader som börjar med `#`  
 
 Jag valde en väldig lätt konfiguration.
 
-> subnet 10.11.12.0 netmask 255.255.255.0 { 
->   range 10.11.12.100 10.11.12.200; 
->   }
+	subnet 10.11.12.0 netmask 255.255.255.0 { 
+	range 10.11.12.100 10.11.12.200; 
+	}
 
 Allt annat fick vara default, ni kan skriva era subnet utdelning längst ner eller var ni tycker det passar
 
@@ -55,7 +52,7 @@ Sedan måste vi tala om vilket **interface** dhcp servern ska lyssna på det gö
 
 längst ner hittar ni INTERFACES lägg till eth1
 	
-> INTERFACES="eth1"
+	INTERFACES="eth1"
 
 Nu är konfigurationen klar och det är bara att starta om dhcp-servern
 
@@ -70,14 +67,14 @@ Nu är konfigurationen klar och det är bara att starta om dhcp-servern
 
 	$ vagrant ssh happyclient
 
-vi har ingen konfiguration för nätverkskortet eth1, nätverkskorten konfigureras i en fil som hter interfaces öppna den för editering
+vi har ingen konfiguration för nätverkskortet eth1, nätverkskorten konfigureras i en fil som heter interfaces öppna den för editering
 
 	vagrant@happyclient:~$ sudo nano /etc/network/interfaces
 
 jag la till följande 
 
-> auto eth1 
-> iface eth1 inet dhcp
+	auto eth1 
+	iface eth1 inet dhcp
 
 avsluta/spara filen och start om nätverkskortet med
 
